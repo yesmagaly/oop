@@ -1,0 +1,9 @@
+name: oop
+services:
+  db:
+    type: mysql
+    portforward: 3306
+    creds:
+      user: mysql
+      password: mysql
+      database: oo_battle

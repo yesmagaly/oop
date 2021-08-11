@@ -4,20 +4,20 @@
  * SETTINGS!
  */
 $databaseName = 'oo_battle';
-$databaseUser = 'root';
-$databasePassword = '';
+$databaseUser = 'mysql';
+$databasePassword = 'mysql';
 
 /*
  * CREATE THE DATABASE
  */
-$pdoDatabase = new PDO('mysql:host=localhost', 'root');
+$pdoDatabase = new PDO('mysql:host=localhost', 'mysql', $databasePassword);
 $pdoDatabase->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdoDatabase->exec('CREATE DATABASE IF NOT EXISTS oo_battle');
 
 /*
  * CREATE THE TABLE
  */
-$pdo = new PDO('mysql:host=localhost;dbname='.$databaseName, 'root', $databasePassword);
+$pdo = new PDO('mysql:host=localhost;dbname='.$databaseName, 'mysql', $databasePassword);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // initialize the table
